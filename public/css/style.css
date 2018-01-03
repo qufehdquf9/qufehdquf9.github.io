@@ -1,0 +1,139 @@
+/* 레이아웃 */
+#body {
+  display: grid;
+  grid-template-areas: "header header" "nav article";
+  grid-template-rows: 60px 1fr;
+  grid-template-columns: 20% 1fr;
+  grid-gap: 0px;
+  height: 100vh;
+  margin: 0;
+}
+
+#pageHeader {
+  grid-area: header;
+}
+
+#mainArticle {
+  grid-area: article;
+}
+
+#mainNav {
+  grid-area: nav;
+}
+
+header, footer, article, nav, div {
+  padding: 8px;
+}
+
+/* 로고 */
+#logo {
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+  background-color: white;
+  background-image: url('../imgs/logo.png');
+  background-position: 2px 5px; 
+  background-repeat: no-repeat;
+  padding: 10px 19px 11px;
+}
+
+/* 검색 창 */
+#search-box {
+  width: 150px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('../imgs/searchicon.png');
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 13px 20px 11px 40px;
+}
+
+/* 로그인 버튼 */
+#login-btn {
+  float: right;
+  clear: both;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  padding: 10px 6px 11px;
+  cursor: pointer;
+}
+
+/* 네비 틀 */
+#mainNav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* 네비 항목 */
+#mainNav ul li{
+  border-bottom: 1px solid #efefef;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  font-size: 16px;
+  padding: 10px 6px 11px;
+  margin-bottom: 8px;
+  cursor: pointer;
+
+}
+
+#mainNav ul li:before{
+  content: ">";
+  padding: 0px 5px 6px 0px;
+}
+
+*::selection{
+  background: rgba(126, 123, 123, 0.685);
+}
+
+/* 게시판 */
+.board {
+  border-bottom: 1px solid #efefef;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+}
+.post {
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  margin-bottom: 8px;
+}
+.post * {
+  border-bottom: 1px solid #efefef;
+}
+
+/* 모바일 용 */
+@media all and (max-width: 520px) {
+  #body {
+    grid-template-areas: "header" "nav" "article";
+    grid-template-rows: 60px 60px 1fr;  
+    grid-template-columns: 1fr;
+  }
+
+  #mainNav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  #mainNav ul li:before{
+    content: "";
+    padding: 0px 5px 6px 0px;
+  }
+
+  #mainNav li{
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 4px;
+  }
+}
