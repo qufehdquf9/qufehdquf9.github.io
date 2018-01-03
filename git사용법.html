@@ -4,9 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>git 사용법</title>
 </head>
 <body>
-    
+    git 기본 명령어
+
+    git init : git이라는 프로그램으로 해당 경로를 초기화 한다.git에서 init 초기화란 버전관리를 할 수 있는 공간을 만들어 주는 것이다.최초에 한번만 수행한다.
+    git add 파일명 : 입력한 파일을 스냅샷을 찍어 .git 로컬 저장소에 빽업한다.* -->모든 파일 
+    git commit -m "메세지" : 스냅샷을 찍은 파일에 대한 설명을 작성하여 git에게 알려준다.
+    git remote add origin "github 저장소 url" : 로컬저장소에 원격저장소를 추가한다.최초에 한번만 수행  
+    git push -u origin master : origin(로컬저장소)에서 master(원격저장소)로 데이터를 추가한다.
 </body>
 </html>
